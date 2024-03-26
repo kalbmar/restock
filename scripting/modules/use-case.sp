@@ -3,7 +3,7 @@ void UseCase_Firearms(int client, int ammoType, bool isNoAmmo, WeaponType weapon
         int ammoAmount = Weapon_GetAmmoAmount(ammoType);
 
         Timer_SetToRestock(client);
-        Message_RestocketAmmo(client, weaponType, ammoAmount);
+        Message_RestockedAmmo(client, weaponType, ammoAmount);
         UseCase_GiveAmmo(client, ammoAmount, ammoType);
     }
 }
@@ -13,7 +13,7 @@ void UseCase_Grenade(int client, int ammoType, bool isNoAmmoGrenade, WeaponType 
         int ammoAmount = Weapon_GetAmmoAmount(ammoType);
 
         Timer_SetToRestock(client);
-        Message_RestocketAmmo(client, weaponType, ammoAmount);
+        Message_RestockedAmmo(client, weaponType, ammoAmount);
         UseCase_GiveAmmo(client, ammoAmount, ammoType);
     }
 }
@@ -23,7 +23,7 @@ void UseCase_GrenadeRifle(int client, int ammoType, bool isNoAmmoGrenadeRifle, W
         int ammoAmount = Weapon_GetAmmoAmount(ammoType);
 
         Timer_SetToRestock(client);
-        Message_RestocketAmmo(client, weaponType, ammoAmount);
+        Message_RestockedAmmo(client, weaponType, ammoAmount);
         UseCase_GiveAmmo(client, ammoAmount, ammoType);
     }
 }
@@ -32,12 +32,12 @@ void UseCase_GrenadeRifleInHand(int client, int ammoType, bool isNoAmmoGrenade, 
     if (isNoAmmoGrenade) {
         char grenadeClassName[GRENADE_NAME_LENGTH];
         int team = GetClientTeam(client);
-        int grenadeIndex = team - TEAM_ALIIES;
+        int grenadeIndex = team - TEAM_ALLIES;
         int ammoAmount = Weapon_GetAmmoAmount(ammoType);
         
         Weapon_GetGrenadeRifleName(grenadeClassName, grenadeIndex);
         Timer_SetToRestock(client);
-        Message_RestocketAmmo(client, weaponType, ammoAmount);
+        Message_RestockedAmmo(client, weaponType, ammoAmount);
         GivePlayerItem(client, grenadeClassName);
         Sound_EmitToClient(client);
     }

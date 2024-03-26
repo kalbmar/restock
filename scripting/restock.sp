@@ -1,13 +1,14 @@
 #include <sourcemod>
 #include <sdktools>
-#include <morecolors>
 
-#include "sound"
-#include "client"
-#include "console-command"
-#include "timer"
-#include "use-case"
-#include "weapon"
+#include "morecolors"
+
+#include "restock/sound"
+#include "restock/client"
+#include "restock/console-command"
+#include "restock/timer"
+#include "restock/use-case"
+#include "restock/weapon"
 
 #include "modules/console-variable.sp"
 #include "modules/console-command.sp"
@@ -31,7 +32,7 @@ public Plugin myinfo = {
 
 public void OnPluginStart() {
     ConVar_Create();
-    Commmand_Create();
+    Command_Create();
     Event_Create();
 
     LoadTranslations("restock.phrases");

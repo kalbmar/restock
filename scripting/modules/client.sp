@@ -1,7 +1,7 @@
 static int g_isPlayerRestocked[MAXPLAYERS + 1] = {RESTOCK_DEFAULT_VALUE, ...};
 
 bool Client_IsUsesRestock(int client) {
-    return g_isPlayerRestocked[client] >= ConVar_GetMaxCountUses();
+    return g_isPlayerRestocked[client] >= ConVar_GetMaxCountUsesRestock();
 }
 
 int Client_GetActiveWeapon(int client) {

@@ -10,6 +10,6 @@ float ConVar_GetDelayUsesRestock() {
     return g_delayUsesBetweenRestock.FloatValue;
 }
 
-int ConVar_GetMaxCountUses() {
+int ConVar_GetMaxCountUsesRestock() {
     return g_restockMaxUses.IntValue;
 }

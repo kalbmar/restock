@@ -1,6 +1,6 @@
 # Restock
 
-- Weapon restock
+Weapon restock
 
 ### Supported games
 

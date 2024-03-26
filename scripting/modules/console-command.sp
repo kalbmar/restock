@@ -1,4 +1,4 @@
-void Commmand_Create() {
+void Command_Create() {
     AddCommandListener(Command_VoiceNeedAmmo, "voice_needammo");
     RegConsoleCmd("sm_restock", Command_Restock);
 }

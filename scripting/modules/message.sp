@@ -19,6 +19,6 @@ void Message_CooldownTime(int client, int messageIndex, int time) {
     CPrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[messageIndex], time);
 }
 
-void Message_RestocketAmmo(int client, WeaponType weaponType, int ammoAmount) {
+void Message_RestockedAmmo(int client, WeaponType weaponType, int ammoAmount) {
     CPrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[weaponType], ammoAmount);
 }

@@ -26,7 +26,7 @@ void Sound_EmitToClient(int client) {
 void Sound_PlayAmmo(int client, bool playSound) {
     int team = GetClientTeam(client);
     int ammoVersion = GetRandomInt(AMMO_VERSION_FIRST, AMMO_VERSION_THREE);
-    int soundOffset = (team - TEAM_ALIIES) * AMMO_VERSIONS_AMOUNT + ammoVersion;
+    int soundOffset = (team - TEAM_ALLIES) * AMMO_VERSIONS_AMOUNT + ammoVersion;
 
     if (playSound) {
         Sound_PlayVoiceAskAmmo(soundOffset, client);
