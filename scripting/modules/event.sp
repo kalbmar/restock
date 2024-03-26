@@ -7,12 +7,12 @@ public void Event_PlayerSpawn(Event event, const char[] name, bool dontBroadcast
     int userId = event.GetInt("userid");
     int client = GetClientOfUserId(userId);
 
-    g_isPlayerRestocked[client] = RESTOCK_DEFAULT_VALUE;
+    Client_ResetRestocked(client);
 }
 
 public void Event_PlayerDeath(Event event, const char[] name, bool dontBroadcast) {
     int userId = event.GetInt("userid");
     int client = GetClientOfUserId(userId);
 
-    delete g_timerToNextUseResrock[client];
+    Timer_Destroy(client);
 }

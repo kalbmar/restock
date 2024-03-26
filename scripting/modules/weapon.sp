@@ -1,3 +1,38 @@
+static char g_grenadeRifle[][] = {
+    "weapon_riflegren_us",
+    "weapon_riflegren_ger"
+};
+
+static int g_weaponAmmoArray [WEAPON_ARRAY_LENGTH] = {0, 14, 16, 40, 80, 60, 30, 50, 180, 240, 300, 250, 4, 1, 1, 0, 0, 1, 1, 0, 0, 1, 1, 0, 0};
+
+static WeaponType g_weaponType[] = {
+    WeaponType_Melee,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Firearms,
+    WeaponType_Bazooka,
+    WeaponType_Grenade,
+    WeaponType_Grenade,
+    WeaponType_Melee,
+    WeaponType_Melee,
+    WeaponType_GrenadeSmoke,
+    WeaponType_GrenadeSmoke,
+    WeaponType_Melee,
+    WeaponType_Melee,
+    WeaponType_GrenadeRifle,
+    WeaponType_GrenadeRifle,
+    WeaponType_GrenadeRifleInHand,
+    WeaponType_GrenadeRifleInHand
+};
+
 void Weapon_Define(int client, int activeWeapon) {
     int ammoType = Weapon_GetAmmoType(activeWeapon);
 
@@ -75,4 +110,12 @@ int Weapon_GetAmmoType(int activeWeapon) {
 
 WeaponType Weapon_GetType(int ammoType) {
     return g_weaponType[ammoType];
+}
+
+void Weapon_GetGrenadeRifleName(char[] name, int index) {
+    strcopy(name, GRENADE_NAME_LENGTH, g_grenadeRifle[index]);
+}
+
+int Weapon_GetAmmoAmount(int ammoType) {
+    return g_weaponAmmoArray[ammoType];
 }

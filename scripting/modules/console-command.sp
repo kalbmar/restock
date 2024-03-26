@@ -32,9 +32,9 @@ void Command_ReceiveAmmo(int client, bool playSound) {
         return;
     }
 	
-    int second = RoundToCeil(g_delayUsesBetweenRestock.IntValue + g_secondToUse[client] - GetGameTime());
+    int second = RoundToCeil(ConVar_GetDelayUsesRestock() + Timer_TimeToUseRestock(client) - GetGameTime());
 
-    if (g_timerToNextUseResrock[client] != null) {
+    if (Timer_IsValid(client)) {
         Message_CooldownTime(client, MESSAGE_COOLDOWN_TIME, second);
         		
         return;

@@ -1,3 +1,12 @@
+static char g_ammoSounds[][] = {
+    "player/american/us_needammo.wav",
+    "player/american/us_needammo2.wav",
+    "player/american/us_needammo3.wav",
+    "player/german/ger_needammo.wav",
+    "player/german/ger_needammo2.wav",
+    "player/german/ger_needammo3.wav"
+};
+
 void Sound_Precache() {
     for (int i = 0; i < sizeof(g_ammoSounds); i++) {
         PrecacheSound(g_ammoSounds[i], PRELOAD_YES);
@@ -15,7 +24,7 @@ void Sound_EmitToClient(int client) {
 }
 
 void Sound_PlayAmmo(int client, bool playSound) {
-    int team = Client_GetTeam(client);
+    int team = GetClientTeam(client);
     int ammoVersion = GetRandomInt(AMMO_VERSION_FIRST, AMMO_VERSION_THREE);
     int soundOffset = (team - TEAM_ALIIES) * AMMO_VERSIONS_AMOUNT + ammoVersion;
 
