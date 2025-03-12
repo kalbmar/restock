@@ -1,15 +1,15 @@
 #include <sourcemod>
 #include <sdktools>
 
-#include "morecolors"
-
 #include "restock/sound"
 #include "restock/client"
 #include "restock/console-command"
 #include "restock/timer"
 #include "restock/use-case"
 #include "restock/weapon"
+#include "restock/forward"
 
+#include "modules/forward.sp"
 #include "modules/console-variable.sp"
 #include "modules/console-command.sp"
 #include "modules/client.sp"
@@ -26,11 +26,12 @@ public Plugin myinfo = {
     name = "Restock",
     author = "Kalbmar",
     description = "Weapon restock",
-    version = "1.0.0",
+    version = "1.0.1",
     url = "https://github.com/kalbmar/restock",
 };
 
 public void OnPluginStart() {
+    Forward_Create();
     ConVar_Create();
     Command_Create();
     Event_Create();

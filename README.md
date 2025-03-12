@@ -15,3 +15,10 @@ Weapon restock
 
 - sm_restock_max_uses - Maximum count uses [default: "2"]
 - sm_restock_delay_uses - Delay between restock [default: "30"]
+
+### API
+
+`Return 'Plugin_Stop' to disable restocking`
+```sourcepawn
+forward Action Restock_OnUse(int client);
+```

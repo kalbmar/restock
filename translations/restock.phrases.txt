@@ -2,7 +2,7 @@
 {
     "Prefix"
     {
-        "en"    "{burlywood}[Restock]{default} "
+        "en"    "DEB887[Restock] "
     }
 
     "Melee weapon"
@@ -13,13 +13,13 @@
     "Firearms weapon"
     {
 	"#format"  "{1:d}"
-        "en"    "You received {wheat}{1}{default} extra ammo"
+        "en"    "You received F5DEB3{1} extra ammo"
     }
 
     "Bazooka weapon"
     {
 	"#format"  "{1:d}"
-        "en"    "You received {wheat}{1}{default} additional projectiles"
+        "en"    "You received F5DEB3{1} additional projectiles"
     }
 
     "Grenade"
@@ -50,6 +50,6 @@
     "Cooldown time"
     {
 	"#format"  "{1:d}"
-        "en"    "You have already replenished ammo. Try again in {wheat}{1}{default} sec."
+        "en"    "You have already replenished ammo. Try again in F5DEB3{1} sec."
     }
 }

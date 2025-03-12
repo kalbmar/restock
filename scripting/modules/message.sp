@@ -12,13 +12,13 @@ static char g_messageRestockAmmo[][] = {
 };
 
 void Message_RestockProhibited(int client, int messageIndex) {
-    CPrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[messageIndex]);
+    PrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[messageIndex]);
 }
 
 void Message_CooldownTime(int client, int messageIndex, int time) {
-    CPrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[messageIndex], time);
+    PrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[messageIndex], time);
 }
 
 void Message_RestockedAmmo(int client, WeaponType weaponType, int ammoAmount) {
-    CPrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[weaponType], ammoAmount);
+    PrintToChat(client, "%t%t", "Prefix", g_messageRestockAmmo[weaponType], ammoAmount);
 }

@@ -16,6 +16,10 @@ public Action Command_Restock(int client, int agrs) {
 }
 
 void Command_ReceiveAmmo(int client, bool playSound) {
+    if (Forward_Restock_OnUse(client) == Plugin_Stop) {
+        return;
+    }
+
     if (!IsPlayerAlive(client)) {
         Message_RestockProhibited(client, MESSAGE_DEAD_PLAYER);
         
