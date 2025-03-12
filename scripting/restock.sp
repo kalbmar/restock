@@ -26,7 +26,7 @@ public Plugin myinfo = {
     name = "Restock",
     author = "Kalbmar",
     description = "Weapon restock",
-    version = "1.0.1",
+    version = "1.0.3",
     url = "https://github.com/kalbmar/restock",
 };
 
